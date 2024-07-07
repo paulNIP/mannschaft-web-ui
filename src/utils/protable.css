@@ -1,0 +1,8 @@
+/* src/styles/protable.css */
+.alternate-row-odd {
+    background-color: #f9f9f9;
+  }
+  
+  .alternate-row-even {
+    background-color: #ffffff;
+  }
