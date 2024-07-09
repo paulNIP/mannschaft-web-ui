@@ -149,12 +149,12 @@ export default [
         path: '/list/table-list',
         component: './list/table-list',
       },
-      // {
-      //   name: 'user-list',
-      //   icon: 'smile',
-      //   path: '/list/user-list',
-      //   component: './table-list',
-      // },
+      {
+        name: 'Auftraggeber (Kunde)',
+        icon: 'smile',
+        path: '/list/user-list',
+        component: './list/user-list',
+      },
       // {
       //   name: 'basic-list',
       //   icon: 'smile',

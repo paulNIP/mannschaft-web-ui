@@ -16,10 +16,10 @@ import {
 import {API_URL} from '../../../constants/constants';
 import { Button, Drawer, Input, message } from 'antd';
 import type { FormValueType } from './components/UpdateForm';
-import UpdateForm from './components/UpdateForm';
 import type { TableListItem, TableListPagination } from './data';
 import { addRule, removeRule, rule, updateRule } from './service';
 import '@/utils/protable.css'; // Import the CSS file for row styling
+import Barcode from 'react-barcode';
 /**
  * 添加节点
  *
@@ -202,6 +202,34 @@ const UserList: React.FC = () => {
     dataIndex: "identification_number",
   },
   {
+    title: 'BarCode',
+    dataIndex: "identification_number",
+    render: (text:any) =>
+      <Barcode
+      value={text}
+  width={2}
+  height={20}
+  format={"CODE128"}
+  displayValue={false}
+  fontOptions={""}
+  font={"monospace"}
+  textAlign={"center"}
+  textMargin={2}
+  fontSize={10}
+  background={"#ffffff"}
+  lineColor={"#000000"}
+  margin={3}
+  marginTop={undefined}
+  marginBottom={undefined}
+  marginLeft={undefined}
+  marginRight={undefined}
+  id={undefined}
+  className={undefined}
+      />
+      
+      ,
+  },
+  {
     title: 'Prüfung nach',
     dataIndex: "test_according_to",
   },
@@ -226,9 +254,9 @@ const UserList: React.FC = () => {
     title: 'Inspektionsbericht',
     dataIndex: "report_namr",
     sorter: true,
-    render: (text:any) => <a href={require("/Users/paul85alex/Downloads/TestMasterData/"+text)} target="_blank">
+    render: (text:any) => <a href={"http://178.128.198.101:81/"+text.split("/")[4]} target="_blank">
       <FilePdfOutlined style={{ fontSize: '16px', color: '#FF0000' }} />
-      {"  Bericht"}</a>,
+      {" Bericht"}</a>,
   },
   {
 
