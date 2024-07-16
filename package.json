@@ -44,6 +44,7 @@
     "@antv/l7": "^2.20.13",
     "@antv/l7-maps": "^2.20.13",
     "@antv/l7-react": "^2.4.3",
+    "@popperjs/core": "^2.11.8",
     "@umijs/route-utils": "^2.2.2",
     "antd": "^5.12.7",
     "antd-style": "^3.6.1",
