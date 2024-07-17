@@ -1,16 +1,8 @@
-
-import {
-  AlipayCircleOutlined,
-
-  TaobaoCircleOutlined,
-  WeiboCircleOutlined,
-} from '@ant-design/icons';
-
-
 import { createStyles } from 'antd-style';
 import React from 'react';
 import shape1 from "../../../assets/images/video/shape1.svg"
 import shape2 from "../../../assets/images/video/shape2.svg"
+import { Link } from "react-router-dom";
 
 
 const useStyles = createStyles(({ token }) => {
@@ -130,7 +122,8 @@ const Home: React.FC = () => {
                                 </ul>
                             </div> 
                             <div className="button home-btn">
-                                <a href="signup.html" className="btn">Try for free</a>
+                                {/* <a href="signup.html" className="btn">Try for free</a> */}
+                                <Link to='/user/login' className="btn">Login</Link>
                             </div>
                         </nav>
 
@@ -1004,7 +997,7 @@ const Home: React.FC = () => {
                             <p className="copyright-text">© {new Date().getFullYear()} Opolo Sync - All Rights Reserved</p>
                         </div>
                         <div className="col-lg-6 col-md-6 col-12">
-                            <p className="copyright-owner">Designed and Developed by <a href="https://uideck.com/"
+                            <p className="copyright-owner">Designed and Developed by <a href="https://opolostechnologies.com/"
                                     rel="nofollow" target="_blank">Opolos Technologies</a></p>
                         </div>
                     </div>
